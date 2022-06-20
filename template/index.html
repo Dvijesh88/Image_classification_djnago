@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<h1>Upload Image for Classification</h1>
+<form method="post" enctype="multipart/form-data" action="predictclass">
+    {% csrf_token %}
+    <label for="file">Filename:</label>
+    <input type="file" name="filepath" id="file"><br>
+    <input type="submit" name="submit" value="Submit">
+</form>
+<h3>Class lable of uploaded image is : {{predicationlable}} with accuracy score : {{confidence_score}} </h3>
+<img src="{{ filepathname }}" alt="File Not Found">
+{{filepathname}}
+</html>
